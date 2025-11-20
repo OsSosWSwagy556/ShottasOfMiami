@@ -267,7 +267,7 @@ local RayfieldLibrary = {
 	Flags = {},
 	Theme = {
 		Default = {
-			TextColor = Color3.fromRGB(240, 240, 240),
+			TextColor = Color3.fromRGB(0, 0, 255),
 
 			Background = Color3.fromRGB(25, 25, 25),
 			Topbar = Color3.fromRGB(34, 34, 34),
@@ -279,7 +279,7 @@ local RayfieldLibrary = {
 			TabBackground = Color3.fromRGB(80, 80, 80),
 			TabStroke = Color3.fromRGB(85, 85, 85),
 			TabBackgroundSelected = Color3.fromRGB(210, 210, 210),
-			TabTextColor = Color3.fromRGB(240, 240, 240),
+			TabTextColor = Color3.fromRGB(0, 0, 255),
 			SelectedTabTextColor = Color3.fromRGB(50, 50, 50),
 
 			ElementBackground = Color3.fromRGB(35, 35, 35),
