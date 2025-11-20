@@ -283,7 +283,7 @@ local RayfieldLibrary = {
 			SelectedTabTextColor = Color3.fromRGB(50, 50, 50),
 
 			ElementBackground = Color3.fromRGB(25, 25, 25),
-			ElementBackgroundHover = Color3.fromRGB(25, 25, 25),
+			ElementBackgroundHover = Color3.fromRGB(40, 40, 40),
 			SecondaryElementBackground = Color3.fromRGB(25, 25, 25),
 			ElementStroke = Color3.fromRGB(50, 50, 50),
 			SecondaryElementStroke = Color3.fromRGB(40, 40, 40),
@@ -1405,7 +1405,7 @@ local function Unhide()
 		end
 	end
 
-	TweenService:Create(dragBarCosmetic, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0.5}):Play()
+	TweenService:Create(dragBarCosmetic, TweenInfo.new(0.25, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {BackgroundTransparency = 0.5}):Play()
 
 	task.wait(0.5)
 	Minimised = false
@@ -1954,7 +1954,6 @@ function RayfieldLibrary:CreateWindow(Settings)
 
 	Notifications.Template.Visible = false
 	Notifications.Visible = true
-
 	Rayfield.Enabled = true
 
 	task.wait(0.5)
@@ -2208,7 +2207,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 				task.spawn(function()
 					TweenService:Create(ColorPicker, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {BackgroundColor3 = SelectedTheme.ElementBackgroundHover}):Play()
 					TweenService:Create(ColorPicker.UIStroke, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
-					task.wait(0.1)
+					task.wait(0.2)
 					TweenService:Create(ColorPicker, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {BackgroundColor3 = SelectedTheme.ElementBackground}):Play()
 					TweenService:Create(ColorPicker.UIStroke, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {Transparency = 0}):Play()
 				end)
@@ -2282,7 +2281,8 @@ function RayfieldLibrary:CreateWindow(Settings)
 				ColorPicker.RGB.RInput.InputBox.Text = tostring(r)
 				ColorPicker.RGB.GInput.InputBox.Text = tostring(g)
 				ColorPicker.RGB.BInput.InputBox.Text = tostring(b)
-				ColorPicker.HexInput.InputBox.Text = string.format("#%02X%02X%02X",color.R*0xFF,color.G*0xFF,color.B*0xFF)
+				hex = string.format("#%02X%02X%02X",color.R*0xFF,color.G*0xFF,color.B*0xFF)
+				ColorPicker.HexInput.InputBox.Text = hex
 			end
 			setDisplay()
 			ColorPicker.HexInput.InputBox.FocusLost:Connect(function()
@@ -2666,31 +2666,24 @@ function RayfieldLibrary:CreateWindow(Settings)
 					InputSettings.Callback(text)
 				end)
 
-				if not Success then
-					TweenService:Create(Input, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {BackgroundColor3 = Color3.fromRGB(85, 0, 0)}):Play()
-					TweenService:Create(Input.UIStroke, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {Transparency = 1}):Play()
-					Input.Title.Text = "Callback Error"
-					print("Rayfield | "..InputSettings.Name.." Callback Error " ..tostring(Response))
-					warn('Check docs.sirius.menu for help with Rayfield specific development.')
-					task.wait(0.5)
-					Input.Title.Text = InputSettings.Name
-					TweenService:Create(Input, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {BackgroundColor3 = SelectedTheme.ElementBackground}):Play()
-					TweenService:Create(Input.UIStroke, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {Transparency = 0}):Play()
+				if not InputSettings.Ext then
+					SaveConfiguration()
 				end
-
-				if Settings.ConfigurationSaving then
-					if Settings.ConfigurationSaving.Enabled and InputSettings.Flag then
-						RayfieldLibrary.Flags[InputSettings.Flag] = InputSettings
-					end
-				end
-
-				Rayfield.Main:GetPropertyChangedSignal('BackgroundColor3'):Connect(function()
-					Input.InputFrame.BackgroundColor3 = SelectedTheme.InputBackground
-					Input.InputFrame.UIStroke.Color = SelectedTheme.InputStroke
-				end)
-
-				return InputSettings
 			end
+
+			if Settings.ConfigurationSaving then
+				if Settings.ConfigurationSaving.Enabled and InputSettings.Flag then
+					RayfieldLibrary.Flags[InputSettings.Flag] = InputSettings
+				end
+			end
+
+			Rayfield.Main:GetPropertyChangedSignal('BackgroundColor3'):Connect(function()
+				Input.InputFrame.BackgroundColor3 = SelectedTheme.InputBackground
+				Input.InputFrame.UIStroke.Color = SelectedTheme.InputStroke
+			end)
+
+			return InputSettings
+		end
 
 		-- Dropdown
 		function Tab:CreateDropdown(DropdownSettings)
@@ -2820,11 +2813,12 @@ function RayfieldLibrary:CreateWindow(Settings)
 					--	Options = {"Option 1","Option 2"},
 					--	CurrentOption = {"Option 1"},
 					--  MultipleOptions = true,
-					--	Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-	--	--	Callback = function(TableOfOptions)
+					--	Flag = "Dropdown1",
+					--	Callback = function(TableOfOptions)
 
-	--	--	end,
-	--	--})
+					--	end,
+					--})
+
 
 					DropdownOption.Interact.ZIndex = 50
 					DropdownOption.Interact.MouseButton1Click:Connect(function()
@@ -3227,7 +3221,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 				if not ToggleSettings.Ext then
 					SaveConfiguration()
 				end
-			end
+			end)
 
 			function ToggleSettings:Set(NewToggleValue)
 				if NewToggleValue == true then
