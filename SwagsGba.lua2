@@ -6,8 +6,7 @@
 	shlex  | Designing + Programming
 	iRay   | Programming
 	Max    | Programming
-	Damian | Programming
-    s
+	Damian | Programming ss
 
 ]]
 
@@ -277,7 +276,7 @@ local RayfieldLibrary = {
 			NotificationBackground = Color3.fromRGB(20, 20, 20),
 			NotificationActionsBackground = Color3.fromRGB(230, 230, 230),
 
-			TabBackground = Color3.fromRGB(25, 25, 25),
+			TabBackground = Color3.fromRGB(75, 75, 75),
 			TabStroke = Color3.fromRGB(0, 0, 0),
 			TabBackgroundSelected = Color3.fromRGB(0, 0, 0),
 			TabTextColor = Color3.fromRGB(0, 0, 255),
