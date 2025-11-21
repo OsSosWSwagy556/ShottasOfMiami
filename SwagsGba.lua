@@ -303,7 +303,7 @@ local RayfieldLibrary = {
             DropdownSelected = Color3.fromRGB(40, 40, 40),
             DropdownUnselected = Color3.fromRGB(30, 30, 30),
 
-            InputBackground = Color3.fromRGB(0, 0, 255),
+            InputBackground = Color3.fromRGB(0, 0, ,255),
             InputStroke = Color3.fromRGB(65, 65, 65),
             PlaceholderColor = Color3.fromRGB(178, 178, 178)
         }
