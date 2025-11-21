@@ -264,49 +264,51 @@ if debugX then
 end
 
 local RayfieldLibrary = {
-	Flags = {},
-	Theme = {
-		Default = {
-			TextColor = Color3.fromRGB(0, 0, 255),
+    Flags = {},
+    Theme = {
+        Default = {
+            TextColor = Color3.fromRGB(0, 0, 255),
 
-			Background = Color3.fromRGB(20, 20, 20),
-			Topbar = Color3.fromRGB(20, 20, 20),
-			Shadow = Color3.fromRGB(0, 0, 0),
+            Background = Color3.fromRGB(20, 20, 20),
+            Topbar = Color3.fromRGB(20, 20, 20),
+            Shadow = Color3.fromRGB(0, 0, 0),
 
-			NotificationBackground = Color3.fromRGB(20, 20, 20),
-			NotificationActionsBackground = Color3.fromRGB(230, 230, 230),
+            NotificationBackground = Color3.fromRGB(20, 20, 20),
+            NotificationActionsBackground = Color3.fromRGB(230, 230, 230),
 
-			TabBackground = Color3.fromRGB(15, 15, 15),
-			TabStroke = Color3.fromRGB(0, 0, 255),
-			TabBackgroundSelected = Color3.fromRGB(15, 15, 15),
-			TabTextColor = Color3.fromRGB(0, 0, 255),
-			SelectedTabTextColor = Color3.fromRGB(60, 60, 255),
+            TabBackground = Color3.fromRGB(15, 15, 15),
+            TabStroke = Color3.fromRGB(0, 0, 255),
+            TabBackgroundSelected = Color3.fromRGB(15, 15, 15),
+            TabTextColor = Color3.fromRGB(0, 0, 255),
+            SelectedTabTextColor = Color3.fromRGB(60, 60, 255),
 
-			ElementBackground = Color3.fromRGB(15, 15, 15),
-			ElementBackgroundHover = Color3.fromRGB(0, 0, 0),
-			SecondaryElementBackground = Color3.fromRGB(0, 0, 255),
-			ElementStroke = Color3.fromRGB(50, 50, 255),
-			SecondaryElementStroke = Color3.fromRGB(0, 0, 0),
+            ElementBackground = Color3.fromRGB(15, 15, 15),
+            ElementBackgroundHover = Color3.fromRGB(0, 0, 0),
+            SecondaryElementBackground = Color3.fromRGB(0, 0, 255),
+            ElementStroke = Color3.fromRGB(50, 50, 255),
+            SecondaryElementStroke = Color3.fromRGB(0, 0, 0),
 
-			SliderBackground = Color3.fromRGB(50, 138, 220),
-			SliderProgress = Color3.fromRGB(50, 138, 220),
-			SliderStroke = Color3.fromRGB(58, 163, 255),
+            SliderBackground = Color3.fromRGB(50, 138, 220),
+            SliderProgress = Color3.fromRGB(50, 138, 220),
+            SliderStroke = Color3.fromRGB(58, 163, 255),
 
-			ToggleBackground = Color3.fromRGB(15, 15, 15),
-			ToggleEnabled = Color3.fromRGB(0, 0, 255),
-			ToggleDisabled = Color3.fromRGB(100, 100, 100),
-			ToggleEnabledStroke = Color3.fromRGB(0, 0, 255),
-			ToggleDisabledStroke = Color3.fromRGB(125, 125, 125),
-			ToggleEnabledOuterStroke = Color3.fromRGB(100, 100, 100),
-			ToggleDisabledOuterStroke = Color3.fromRGB(65, 65, 65),
+            ToggleBackground = Color3.fromRGB(15, 15, 15),
+            ToggleEnabled = Color3.fromRGB(0, 0, 255),
+            ToggleDisabled = Color3.fromRGB(100, 100, 100),
+            ToggleEnabledStroke = Color3.fromRGB(0, 0, 255),
+            ToggleDisabledStroke = Color3.fromRGB(125, 125, 125),
+            ToggleEnabledOuterStroke = Color3.fromRGB(100, 100, 100),
+            ToggleDisabledOuterStroke = Color3.fromRGB(65, 65, 65),
 
-			DropdownSelected = Color3.fromRGB(40, 40, 40),
-			DropdownUnselected = Color3.fromRGB(30, 30, 30),
+            DropdownSelected = Color3.fromRGB(40, 40, 40),
+            DropdownUnselected = Color3.fromRGB(30, 30, 30),
 
-			InputBackground = Color3.fromRGB(30, 30, 30),
-			InputStroke = Color3.fromRGB(65, 65, 65),
-			PlaceholderColor = Color3.fromRGB(178, 178, 178)
-		},
+            InputBackground = Color3.fromRGB(30, 30, 30),
+            InputStroke = Color3.fromRGB(65, 65, 65),
+            PlaceholderColor = Color3.fromRGB(178, 178, 178)
+        }
+    }
+}
 -- Services
 local UserInputService = getService("UserInputService")
 local TweenService = getService("TweenService")
