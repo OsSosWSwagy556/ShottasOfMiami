@@ -267,7 +267,7 @@ local RayfieldLibrary = {
 	Flags = {},
 	Theme = {
 		Default = {
-			TextColor = Color3.fromRGB(0, 50, 150),
+			TextColor = Color3.fromRGB(0, 50, 255),
 
 			Background = Color3.fromRGB(20, 20, 20),
 			Topbar = Color3.fromRGB(20, 20, 20),
