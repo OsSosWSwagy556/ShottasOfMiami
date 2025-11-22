@@ -271,22 +271,22 @@ local RayfieldLibrary = {
 
             Background = Color3.fromRGB(20, 20, 20),
             Topbar = Color3.fromRGB(20, 20, 20),
-            Shadow = Color3.fromRGB(0, 0, 0),
+            Shadow = Color3.fromRGB(0, 0, 255),
 
             NotificationBackground = Color3.fromRGB(20, 20, 20),
             NotificationActionsBackground = Color3.fromRGB(230, 230, 230),
 
-            TabBackground = Color3.fromRGB(0, 0, 255),
+            TabBackground = Color3.fromRGB(15, 15, 15),
             TabStroke = Color3.fromRGB(0, 0, 255),
             TabBackgroundSelected = Color3.fromRGB(15, 15, 15),
             TabTextColor = Color3.fromRGB(0, 0, 255),
             SelectedTabTextColor = Color3.fromRGB(60, 60, 255),
 
-            ElementBackground = Color3.fromRGB(0, 0, 255),
+            ElementBackground = Color3.fromRGB(15, 15, 15),
             ElementBackgroundHover = Color3.fromRGB(0, 0, 0),
             SecondaryElementBackground = Color3.fromRGB(0, 0, 255),
-            ElementStroke = Color3.fromRGB(0, 0, 255),
-            SecondaryElementStroke = Color3.fromRGB(0, 0, 255),
+            ElementStroke = Color3.fromRGB(50, 50, 255),
+            SecondaryElementStroke = Color3.fromRGB(0, 0, 0),
 
             SliderBackground = Color3.fromRGB(50, 138, 220),
             SliderProgress = Color3.fromRGB(50, 138, 220),
@@ -303,9 +303,9 @@ local RayfieldLibrary = {
             DropdownSelected = Color3.fromRGB(40, 40, 40),
             DropdownUnselected = Color3.fromRGB(30, 30, 30),
 
-            InputBackground = Color3.fromRGB(0, 0, 255),
-            InputStroke = Color3.fromRGB(0, 0, 255),
-            PlaceholderColor = Color3.fromRGB(0, 0, 255)
+            InputBackground = Color3.fromRGB(30, 30, 30),
+            InputStroke = Color3.fromRGB(65, 65, 65),
+            PlaceholderColor = Color3.fromRGB(178, 178, 178)
         }
     }
 }
