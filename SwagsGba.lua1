@@ -267,7 +267,7 @@ local RayfieldLibrary = {
 	Flags = {},
 	Theme = {
 		Default = {
-			TextColor = Color3.fromRGB(0, 0, 150),
+			TextColor = Color3.fromRGB(0, 50, 150),
 
 			Background = Color3.fromRGB(20, 20, 20),
 			Topbar = Color3.fromRGB(20, 20, 20),
@@ -283,7 +283,7 @@ local RayfieldLibrary = {
 			SelectedTabTextColor = Color3.fromRGB(60, 60, 255),
 
 			ElementBackground = Color3.fromRGB(15, 15, 15),
-			ElementBackgroundHover = Color3.fromRGB(10, 10, 10),
+			ElementBackgroundHover = Color3.fromRGB(0, 0, 0),
 			SecondaryElementBackground = Color3.fromRGB(0, 0, 255),
 			ElementStroke = Color3.fromRGB(50, 50, 255),
 			SecondaryElementStroke = Color3.fromRGB(0, 0, 0),
@@ -1334,23 +1334,6 @@ function RayfieldLibrary:CreateWindow(Settings)
 		end
 	end
 
-	Topbar.Visible = false
-	Elements.Visible = false
-	LoadingFrame.Visible = true
-
-	if not Settings.DisableRayfieldPrompts then
-		task.spawn(function()
-			while true do
-				task.wait(math.random(180, 600))
-				RayfieldLibrary:Notify({
-					Title = "Rayfield Interface",
-					Content = "Enjoying this UI library? Find it at sirius.menu/discord",
-					Duration = 7,
-					Image = 4370033185,
-				})
-			end
-		end)
-	end
 
 	pcall(function()
 		if not Settings.ConfigurationSaving.FileName then
