@@ -271,7 +271,7 @@ local RayfieldLibrary = {
 
 			Background = Color3.fromRGB(20, 20, 20),
 			Topbar = Color3.fromRGB(20, 20, 20),
-			Shadow = Color3.fromRGB(0, 0, 0),
+			Shadow = Color3.fromRGB(0, 0, 255),
 
 			NotificationBackground = Color3.fromRGB(20, 20, 20),
 			NotificationActionsBackground = Color3.fromRGB(230, 230, 230),
@@ -286,7 +286,7 @@ local RayfieldLibrary = {
 			ElementBackgroundHover = Color3.fromRGB(15, 15, 15),
 			SecondaryElementBackground = Color3.fromRGB(0, 0, 255),
 			ElementStroke = Color3.fromRGB(50, 50, 255),
-			SecondaryElementStroke = Color3.fromRGB(0, 0, 0),
+			SecondaryElementStroke = Color3.fromRGB(0, 0, 255),
 
 			SliderBackground = Color3.fromRGB(50, 138, 220),
 			SliderProgress = Color3.fromRGB(50, 138, 220),
