@@ -283,7 +283,7 @@ local RayfieldLibrary = {
 			SelectedTabTextColor = Color3.fromRGB(60, 60, 255),
 
 			ElementBackground = Color3.fromRGB(15, 15, 15),
-			ElementBackgroundHover = Color3.fromRGB(0, 0, 0),
+			ElementBackgroundHover = Color3.fromRGB(10, 10, 10),
 			SecondaryElementBackground = Color3.fromRGB(0, 0, 255),
 			ElementStroke = Color3.fromRGB(50, 50, 255),
 			SecondaryElementStroke = Color3.fromRGB(0, 0, 0),
@@ -307,6 +307,8 @@ local RayfieldLibrary = {
 			InputStroke = Color3.fromRGB(65, 65, 65),
 			PlaceholderColor = Color3.fromRGB(178, 178, 178)
 		}
+	}
+}
 
 -- Services
 local UserInputService = getService("UserInputService")
